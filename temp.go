@@ -8,7 +8,7 @@ func Conv(temp float64, symbol string) (float64, string, error) {
 	} else if symbol == "F" || symbol == "f" {
 		return FtoC(temp)
 	}
-	return 0, "", fmt.Errorf("unrecognized symbol: %q, want: F, f, C or c\n", symbol)
+	return 0, "", fmt.Errorf("unrecognized symbol: %q\n, want: F, f, C or c", symbol)
 }
 
 func FtoC(a float64) (float64, string, error) {
